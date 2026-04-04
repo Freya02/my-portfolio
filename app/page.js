@@ -62,6 +62,7 @@ export default function Page() {
 
     const sections = gsap.utils.toArray(".section");
     sections.forEach((section) => {
+      // Entrance Animation
       gsap.from(section, {
         scrollTrigger: {
           trigger: section,
@@ -73,7 +74,26 @@ export default function Page() {
         duration: 1,
         ease: "power3.out"
       });
+
+      // Navbar Active State Tracking
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 20%",
+        end: "bottom 20%",
+        onEnter: () => setActiveNav(section.id),
+        onEnterBack: () => setActiveNav(section.id),
+      });
     });
+
+    function setActiveNav(id) {
+      const links = document.querySelectorAll(".nav-links a");
+      links.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${id}`) {
+          link.classList.add("active");
+        }
+      });
+    }
 
     gsap.fromTo(
       ".timeline-item",
@@ -176,10 +196,13 @@ export default function Page() {
             <div className="about-text">
               <h3>Professional Summary</h3>
               <p>
-                Experience in React.js, Java, Python API development, SQL-based
-                back-end systems, MongoDB, CI/CD pipelines, and SDLC-driven delivery.
-                I collaborate with stakeholders to improve software quality, reduce
-                repetitive work, and implement robust technical solutions.
+                Full-stack developer with 5+ years building and automating
+                software solutions across consulting, SaaS, and enterprise
+                environments. Experience in React.js, Java, Python API
+                development, SQL-based back-end systems, MongoDB, CI/CD
+                pipelines, and SDLC-driven delivery, collaborating with
+                stakeholders to improve software quality, reduce repetitive
+                work, and implement robust technical solutions.
               </p>
             </div>
           </div>
