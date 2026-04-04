@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
           <div className="nav-content">
             <div className="logo-container">
               <img src="/logo.png" alt="FV" className="nav-logo" />
-              <span className="logo-text">FREYA VORA</span>
             </div>
             <ul className="nav-links">
               <li><a href="#about">About</a></li>

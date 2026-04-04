@@ -398,27 +398,99 @@ main {
   margin-bottom: 15px;
 }
 
-.skills-grid {
+/* Skills Refactor */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.competency-column h3, .arsenal-column h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.competency-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.competency-item {
+  width: 100%;
+}
+
+.comp-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.progress-track {
+  height: 6px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0; /* Animate this */
+  background: linear-gradient(90deg, var(--accent-secondary), var(--accent-color));
+  box-shadow: 0 0 10px var(--accent-secondary);
+  border-radius: 10px;
+}
+
+.arsenal-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.arsenal-cat-title {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.arsenal-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
-.skill-tag {
-  background: rgba(112, 0, 255, 0.1);
-  border: 1px solid rgba(112, 0, 255, 0.3);
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-family: var(--font-heading);
-  color: #fff;
+.arsenal-tag {
+  background: rgba(112, 0, 255, 0.05);
+  border: 1px solid rgba(112, 0, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
   transition: all 0.3s ease;
-  cursor: default;
 }
 
-.skill-tag:hover {
-  background: rgba(255, 51, 102, 0.2);
-  border-color: rgba(255, 51, 102, 0.5);
-  box-shadow: 0 0 15px rgba(255, 51, 102, 0.3);
+.arsenal-tag:hover {
+  background: rgba(255, 51, 102, 0.1);
+  border-color: var(--accent-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 .flex-col-center {

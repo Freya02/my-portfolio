@@ -95,21 +95,17 @@ export default function Page() {
     );
 
     gsap.fromTo(
-      ".skill-tag",
-      {
-        scale: 0,
-        opacity: 0
-      },
+      ".progress-fill",
+      { width: 0 },
       {
         scrollTrigger: {
-          trigger: ".skills-grid",
-          start: "top 85%"
+          trigger: ".skills-container",
+          start: "top 80%"
         },
-        scale: 1,
-        opacity: 1,
+        width: (index, target) => target.getAttribute("data-percent") + "%",
+        duration: 1.5,
         stagger: 0.1,
-        duration: 0.5,
-        ease: "back.out(2)"
+        ease: "power2.out"
       }
     );
 
@@ -299,18 +295,15 @@ export default function Page() {
           <div className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="glass-panel timeline-content">
-              <h3>EduHub-Learning Management System</h3>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                <h3>EduHub-Learning Management System</h3>
+                <a href="https://github.com/Freya02/Eduhub-LMS" target="_blank" rel="noreferrer" className="gradient-text" style={{ fontSize: "1.2rem" }}>🔗</a>
+              </div>
               <span className="timeline-date">React, Spring Boot, MongoDB, AWS S3</span>
               <ul style={{ paddingLeft: "20px", marginTop: "10px" }}>
-                <li style={{ marginBottom: "8px" }}>
-                  Architected a full-stack course management platform with Java Spring Boot backend and React front-end.
-                </li>
-                <li style={{ marginBottom: "8px" }}>
-                  Integrated AWS S3 for secure, scalable content storage and MongoDB for NoSQL data management.
-                </li>
-                <li>
-                  Applied SDLC best practices, testing, and debugging to ensure maintainability and performance.
-                </li>
+                <li style={{ marginBottom: "8px" }}>Architected a full-stack course management platform with <strong>Java Spring Boot</strong> backend and <strong>React</strong> front-end.</li>
+                <li style={{ marginBottom: "8px" }}>Integrated <strong>AWS S3</strong> for secure, scalable content storage and <strong>MongoDB</strong> for NoSQL data management.</li>
+                <li>Applied SDLC best practices, testing, and debugging to ensure maintainability and performance.</li>
               </ul>
             </div>
           </div>
@@ -318,18 +311,15 @@ export default function Page() {
           <div className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="glass-panel timeline-content">
-              <h3>Strangely</h3>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                <h3>Strangely</h3>
+                <a href="https://github.com/Freya02/Strangely" target="_blank" rel="noreferrer" className="gradient-text" style={{ fontSize: "1.2rem" }}>🔗</a>
+              </div>
               <span className="timeline-date">Spring Boot, MySQL, SOLID Principles, TDD</span>
               <ul style={{ paddingLeft: "20px", marginTop: "10px" }}>
-                <li style={{ marginBottom: "8px" }}>
-                  Developed a social networking platform with Spring Boot and MySQL, covering the complete software lifecycle.
-                </li>
-                <li style={{ marginBottom: "8px" }}>
-                  Implemented SOLID principles and TDD (JUnit) for higher code quality and reliability.
-                </li>
-                <li>
-                  Maintained stability through proactive debugging and preventive maintenance.
-                </li>
+                <li style={{ marginBottom: "8px" }}>Developed a social networking platform with <strong>Spring Boot</strong> and <strong>MySQL</strong>, covering the complete software lifecycle.</li>
+                <li style={{ marginBottom: "8px" }}>Implemented <strong>SOLID principles</strong> and <strong>TDD</strong> (<strong>JUnit</strong>) for higher code quality and reliability.</li>
+                <li>Maintained stability through proactive debugging and preventive maintenance.</li>
               </ul>
             </div>
           </div>
@@ -337,18 +327,15 @@ export default function Page() {
           <div className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="glass-panel timeline-content">
-              <h3>ToDoApp</h3>
-              <span className="timeline-date">React, Docker, AWS EC2, RDS, S3, VPC, Load Balancer</span>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                <h3>ToDoApp</h3>
+                <a href="https://github.com/Freya02/CloudAssignments/tree/main/TermAssignment" target="_blank" rel="noreferrer" className="gradient-text" style={{ fontSize: "1.2rem" }}>🔗</a>
+              </div>
+              <span className="timeline-date">React, Docker, AWS EC2, RDS, S3, VPC, ELB, CloudFormation</span>
               <ul style={{ paddingLeft: "20px", marginTop: "10px" }}>
-                <li style={{ marginBottom: "8px" }}>
-                  Developed a cloud-native task management system integrating multiple AWS services.
-                </li>
-                <li style={{ marginBottom: "8px" }}>
-                  Ensured availability and fault tolerance with VPC, Elastic Load Balancer, and IaC via CloudFormation.
-                </li>
-                <li>
-                  Optimized performance and applied security best practices in a DevOps environment.
-                </li>
+                <li style={{ marginBottom: "8px" }}>Developed a cloud-native task management system integrating multiple <strong>AWS services</strong>.</li>
+                <li style={{ marginBottom: "8px" }}>Ensured availability and fault tolerance with <strong>VPC</strong>, <strong>Elastic Load Balancer</strong>, and IaC via <strong>CloudFormation</strong>.</li>
+                <li>Optimized performance and applied security best practices in a DevOps environment.</li>
               </ul>
             </div>
           </div>
@@ -387,28 +374,69 @@ export default function Page() {
           <h2 className="section-title">05. Tech_Stack</h2>
           <div className="line"></div>
         </div>
-        <div className="skills-grid">
-          {[
-            ["Full-stack", "React.js, TypeScript, JavaScript, Python, Java REST APIs, SQL backends"],
-            ["Frontend", "React.js, TypeScript, HTML, CSS"],
-            ["Backend", "Python APIs/scripts, Java services, MongoDB, Redis cache, RESTful services"],
-            ["Databases", "MongoDB, MySQL"],
-            ["DevOps/CI/CD", "Bitbucket, Git, CI/CD Pipelines, Atlassian Jira/Confluence, Docker"],
-            ["Tools", "AEM, Postman, Mixpanel"],
-            ["Testing", "TDD (Jest, JUnit), Integration Testing"],
-            ["Soft Skills", "Cross-Functional Collaboration, Agile/Scrum, Technical Design, Process Automation, Stakeholder Communication, Team Leadership"]
-          ].map(([label, text]) => (
-            <div
-              key={label}
-              className="skill-tag"
-              style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", textAlign: "left" }}
-            >
-              <span style={{ color: "var(--accent-color)", fontSize: "0.8rem", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "4px" }}>
-                {label}
-              </span>
-              {text}
+        <div className="skills-container">
+          <div className="competency-column">
+            <h3>Core Competencies</h3>
+            <div className="competency-list">
+              {[
+                ["JAVA", 85],
+                ["SPRING BOOT", 80],
+                ["PYTHON", 90],
+                ["FAST API", 90],
+                ["AI AGENTS", 90],
+                ["AWS", 85],
+                ["AGILE", 95],
+                ["MICROSERVICES", 85],
+                ["SQL", 85]
+              ].map(([label, percent]) => (
+                <div key={label} className="competency-item">
+                  <div className="comp-header">
+                    <span>{label}</span>
+                    <span>{percent}%</span>
+                  </div>
+                  <div className="progress-track">
+                    <div className="progress-fill" data-percent={percent}></div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className="arsenal-column">
+            <h3>Tech Arsenal</h3>
+            <div>
+              <span className="arsenal-cat-title">Backend</span>
+              <div className="arsenal-tags">
+                {["Java", "Python", "Node.js", "Next.js", "Spring", "SpringBoot", "Fast API", "Spring Cloud", "Spring Security", "Django"].map(tag => (
+                  <span key={tag} className="arsenal-tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <div style={{ marginTop: "20px" }}>
+              <span className="arsenal-cat-title">Frontend</span>
+              <div className="arsenal-tags">
+                {["React", "HTML", "CSS", "TypeScript", "JavaScript", "Flutter", "Android", "Material UI", "JUnit", "Mockito", "Microservices"].map(tag => (
+                  <span key={tag} className="arsenal-tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <div style={{ marginTop: "20px" }}>
+              <span className="arsenal-cat-title">Cloud & Databases</span>
+              <div className="arsenal-tags">
+                {["AWS ECS", "Lambda", "AWS VPC", "EC2", "S3", "AWS Elastic Load Balancing", "AWS Elastic Beanstalk", "AWS Backup", "AWS Cognito", "GCP", "Azure", "Firebase", "MySQL", "MongoDB", "DynamoDB", "Firestore", "RDS"].map(tag => (
+                  <span key={tag} className="arsenal-tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <div style={{ marginTop: "20px" }}>
+              <span className="arsenal-cat-title">DevOps & Tools</span>
+              <div className="arsenal-tags">
+                {["Git", "Docker", "CI/CD", "Kubernetes", "Openshift", "Harness", "Lightspeed", "Linux CLI", "Terraform", "AWS CloudFormation", "GCP Cloud Build", "Jenkins", "Agile Methodologies", "Software Development Lifecycle", "OOPs", "Jira", "Confluence", "Maven", "UML", "Figma", "Grafana"].map(tag => (
+                  <span key={tag} className="arsenal-tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
