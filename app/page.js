@@ -173,18 +173,7 @@ export default function Page() {
           <div className="line"></div>
         </div>
         <div className="about-content">
-          <div className="about-card glass-panel flex-row">
-            <div className="about-icon">🪐</div>
-            <div className="about-text">
-              <h3>Professional Philosophy</h3>
-              <p>
-                I focus on blending modern frameworks, reliable back-end architecture,
-                and scalable design to build high-quality solutions. This portfolio
-                itself is a dynamic React application developed to load fast and
-                perform seamlessly.
-              </p>
-            </div>
-          </div>
+
           <div className="about-card glass-panel flex-row mt-4">
             <div className="about-icon">⚡</div>
             <div className="about-text">
