@@ -46,7 +46,7 @@ export default function Page() {
         y: 30,
         duration: 0.8
       }, "-=0.2")
-      .from(".cta-buttons .btn", {
+      .from(".hero-buttons .btn", {
         y: 20,
         opacity: 0,
         stagger: 0.2,
@@ -166,7 +166,7 @@ export default function Page() {
             solutions across consulting, SaaS, and enterprise environments.
           </p>
 
-          <div className="cta-buttons">
+          <div className="hero-buttons">
             <a href="#about" className="btn primary-btn">Initialize_Profile</a>
             <a href="#contact" className="btn secondary-btn">Contact_Me</a>
           </div>

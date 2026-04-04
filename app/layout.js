@@ -1,12 +1,18 @@
-import { Inter, Orbitron } from 'next/font/google';
-import './globals.css';
+import { Inter, Orbitron } from "next/font/google";
+import "./globals.css";
+import Navbar from "./Navbar";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
-const orbitron = Orbitron({ subsets: ['latin'], variable: '--font-heading', weight: ['400', '700', '900'], display: 'swap' });
+const inter = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "700", "900"],
+  display: "swap",
+});
 
 export const metadata = {
-  title: 'AI Portfolio | Exploring Antigravity',
-  description: 'AI Portfolio exploring the intersection of AI and Development.',
+  title: "Freya Jayant Vora | Full Stack Developer",
+  description: "Professional Portfolio of Freya Jayant Vora, a Full Stack Developer specialized in React, Java, and Python.",
 };
 
 export default function RootLayout({ children }) {
@@ -18,23 +24,7 @@ export default function RootLayout({ children }) {
         <div className="bg-glow bg-glow-2"></div>
         <div className="grid-overlay"></div>
 
-        {/* Navigation */}
-        <nav className="glass-nav">
-          <div className="nav-content">
-            <div className="logo-container">
-              <img src="/logo.png" alt="FV" className="nav-logo" />
-            </div>
-            <ul className="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#awards">Awards</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar />
 
         {children}
       </body>
