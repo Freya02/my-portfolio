@@ -30,16 +30,17 @@ export default function Page() {
       .from(".char", {
         opacity: 0,
         y: 20,
-        stagger: 0.03,
-        duration: 0.4,
-        ease: "back.out(2)"
-      }, "-=0.2")
-      .from(".gradient-text.hero-name", {
+        stagger: 0.02,
+        duration: 0.5,
+        ease: "back.out(1.5)"
+      }, "-=0.3")
+      .from(".hero-name", {
         opacity: 0,
-        y: 20,
-        duration: 0.6,
-        ease: "power3.out"
-      }, "-=0.1")
+        x: -40,
+        filter: "blur(10px)",
+        duration: 0.8,
+        ease: "power4.out"
+      }, "-=0.2")
       .from(".hero-tagline", {
         opacity: 0,
         y: 30,
