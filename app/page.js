@@ -402,15 +402,12 @@ export default function Page() {
             <h3>Core Competencies</h3>
             <div className="competency-list">
               {[
-                ["JAVA", 85],
-                ["SPRING BOOT", 80],
-                ["PYTHON", 90],
-                ["FAST API", 90],
-                ["AI AGENTS", 90],
-                ["AWS", 85],
-                ["AGILE", 95],
-                ["MICROSERVICES", 85],
-                ["SQL", 85]
+                ["React.js / TypeScript", 95],
+                ["Java / Spring Boot", 85],
+                ["Python (APIs/Scripts)", 90],
+                ["SQL / Databases", 85],
+                ["DevOps / CI/CD", 80],
+                ["Agile / Leadership", 95]
               ].map(([label, percent]) => (
                 <div key={label} className="competency-item">
                   <div className="comp-header">
@@ -423,38 +420,55 @@ export default function Page() {
                 </div>
               ))}
             </div>
+            <div style={{ marginTop: "40px" }}>
+              <span className="arsenal-cat-title">Soft Skills & Leadership</span>
+              <div className="arsenal-tags">
+                {[
+                  "Cross-Functional Collaboration",
+                  "Agile/Scrum",
+                  "Technical Design",
+                  "Process Automation",
+                  "Stakeholder Communication",
+                  "Team Leadership",
+                  "Hiring/Interview Experience",
+                  "Social Committee Participation"
+                ].map(tag => (
+                  <span key={tag} className="arsenal-tag">{tag}</span>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="arsenal-column">
             <h3>Tech Arsenal</h3>
             <div>
-              <span className="arsenal-cat-title">Backend</span>
+              <span className="arsenal-cat-title">Full-stack & Frontend</span>
               <div className="arsenal-tags">
-                {["Java", "Python", "Node.js", "Next.js", "Spring", "SpringBoot", "Fast API", "Spring Cloud", "Spring Security", "Django"].map(tag => (
+                {["React.js", "TypeScript", "JavaScript", "HTML", "CSS", "Material UI"].map(tag => (
                   <span key={tag} className="arsenal-tag">{tag}</span>
                 ))}
               </div>
             </div>
             <div style={{ marginTop: "20px" }}>
-              <span className="arsenal-cat-title">Frontend</span>
+              <span className="arsenal-cat-title">Backend & Services</span>
               <div className="arsenal-tags">
-                {["React", "HTML", "CSS", "TypeScript", "JavaScript", "Flutter", "Android", "Material UI", "JUnit", "Mockito", "Microservices"].map(tag => (
+                {["Java", "Python", "REST APIs", "Java Services", "Redis cache", "RESTful services", "TDD (Jest, JUnit)", "Integration Testing"].map(tag => (
                   <span key={tag} className="arsenal-tag">{tag}</span>
                 ))}
               </div>
             </div>
             <div style={{ marginTop: "20px" }}>
-              <span className="arsenal-cat-title">Cloud & Databases</span>
+              <span className="arsenal-cat-title">Databases & Cloud</span>
               <div className="arsenal-tags">
-                {["AWS ECS", "Lambda", "AWS VPC", "EC2", "S3", "AWS Elastic Load Balancing", "AWS Elastic Beanstalk", "AWS Backup", "AWS Cognito", "GCP", "Azure", "Firebase", "MySQL", "MongoDB", "DynamoDB", "Firestore", "RDS"].map(tag => (
+                {["MongoDB", "MySQL", "Redis", "SQL backends"].map(tag => (
                   <span key={tag} className="arsenal-tag">{tag}</span>
                 ))}
               </div>
             </div>
             <div style={{ marginTop: "20px" }}>
-              <span className="arsenal-cat-title">DevOps & Tools</span>
+              <span className="arsenal-cat-title">DevOps, Tools & Infrastructure</span>
               <div className="arsenal-tags">
-                {["Git", "Docker", "CI/CD", "Kubernetes", "Openshift", "Harness", "Lightspeed", "Linux CLI", "Terraform", "AWS CloudFormation", "GCP Cloud Build", "Jenkins", "Agile Methodologies", "Software Development Lifecycle", "OOPs", "Jira", "Confluence", "Maven", "UML", "Figma", "Grafana"].map(tag => (
+                {["Bitbucket", "Git", "CI/CD Pipelines", "Docker", "Atlassian Jira/Confluence", "AEM", "Postman", "Mixpanel"].map(tag => (
                   <span key={tag} className="arsenal-tag">{tag}</span>
                 ))}
               </div>
