@@ -162,12 +162,11 @@ export default function Page() {
           </h1>
 
           <p className="hero-tagline">
-            Full-stack developer with 5+ years building and automating software
-            solutions across consulting, SaaS, and enterprise environments.
+            Full-stack developer with 5+ years building and automating software solutions across consulting, SaaS, and enterprise environments. Experienced in React.js, Java, Python API development, SQL-based back-end systems, MongoDB, CI/CD pipelines, and SDLC-driven delivery.
           </p>
 
           <div className="hero-buttons">
-            <a href="#about" className="btn primary-btn">Initialize_Profile</a>
+            <a href="#experience" className="btn primary-btn">View_Experience</a>
             <a href="#contact" className="btn secondary-btn">Contact_Me</a>
           </div>
         </div>
@@ -184,34 +183,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="about" className="section glass-section">
-        <div className="section-header">
-          <h2 className="section-title">01. About_Me</h2>
-          <div className="line"></div>
-        </div>
-        <div className="about-content">
 
-          <div className="about-card glass-panel flex-row mt-4">
-            <div className="about-icon">⚡</div>
-            <div className="about-text">
-              <h3>Professional Summary</h3>
-              <p>
-                Full-stack developer with 5+ years building and automating
-                software solutions across consulting, SaaS, and enterprise
-                environments. Experience in React.js, Java, Python API
-                development, SQL-based back-end systems, MongoDB, CI/CD
-                pipelines, and SDLC-driven delivery, collaborating with
-                stakeholders to improve software quality, reduce repetitive
-                work, and implement robust technical solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section id="experience" className="section">
         <div className="section-header">
-          <h2 className="section-title">02. Experience</h2>
+          <h2 className="section-title">01. Experience</h2>
           <div className="line"></div>
         </div>
         <div className="timeline">
@@ -311,7 +287,7 @@ export default function Page() {
 
       <section id="projects" className="section">
         <div className="section-header">
-          <h2 className="section-title">03. Projects</h2>
+          <h2 className="section-title">02. Projects</h2>
           <div className="line"></div>
         </div>
         <div className="timeline">
@@ -367,7 +343,7 @@ export default function Page() {
 
       <section id="education" className="section">
         <div className="section-header">
-          <h2 className="section-title">04. Education</h2>
+          <h2 className="section-title">03. Education</h2>
           <div className="line"></div>
         </div>
         <div className="timeline">
@@ -394,7 +370,7 @@ export default function Page() {
 
       <section id="skills" className="section glass-section">
         <div className="section-header">
-          <h2 className="section-title">05. Tech_Stack</h2>
+          <h2 className="section-title">04. Tech_Stack</h2>
           <div className="line"></div>
         </div>
         <div className="skills-container">
@@ -479,7 +455,7 @@ export default function Page() {
 
       <section id="awards" className="section">
         <div className="section-header">
-          <h2 className="section-title">06. Awards_&_Recognitions</h2>
+          <h2 className="section-title">05. Awards_&_Recognitions</h2>
           <div className="line"></div>
         </div>
         <div className="timeline">
@@ -504,8 +480,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="contact" className="section flex-col-center">
-        <h2 className="section-title gradient-text glow-text">07. Initialize_Connection</h2>
+      <section id="contact" className="section flex-col-center" style={{ textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
+        <h2 className="section-title gradient-text glow-text">06. Initialize_Connection</h2>
         <p className="contact-desc">Ready to build the future? Let&apos;s chat.</p>
         <a href="mailto:freya.vora@dal.ca" className="btn primary-btn large-btn">
           Send Transmission
