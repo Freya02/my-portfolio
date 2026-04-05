@@ -27,6 +27,16 @@ export default function Navbar() {
             <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
             <li><a href="#awards" onClick={closeMenu}>Awards</a></li>
             <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+            <li>
+              <a
+                href="/Freya_Resume.pdf"
+                download="Freya_Resume.pdf"
+                className="nav-download-btn"
+                onClick={closeMenu}
+              >
+                ↓ Download CV
+              </a>
+            </li>
           </ul>
 
           {/* Hamburger Icon */}

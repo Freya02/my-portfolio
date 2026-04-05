@@ -630,6 +630,34 @@ main {
   font-weight: 700;
 }
 
+/* ── Download CV button ── */
+.nav-download-btn {
+  display: inline-block;
+  padding: 7px 18px !important;
+  border-radius: 30px !important;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  color: #fff !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 1 !important;
+  box-shadow: 0 0 15px rgba(255, 51, 102, 0.35);
+  transition: all 0.3s ease !important;
+  white-space: nowrap;
+}
+
+.nav-download-btn:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.6), 0 0 40px rgba(112, 0, 255, 0.3) !important;
+  text-shadow: none !important;
+}
+
+/* Suppress the underline animation on the download button */
+.nav-download-btn::after {
+  display: none !important;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -723,6 +751,12 @@ main {
     color: #ffffff !important;
     font-weight: 700;
     text-shadow: none !important; /* Remove blurry shadows */
+  }
+
+  .nav-download-btn {
+    font-size: 0.85rem !important;
+    padding: 10px 28px !important;
+    margin-top: 8px;
   }
 
   .main {
